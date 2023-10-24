@@ -2,12 +2,11 @@ services:
   mysql:
     image: 'mysql:latest'
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
-      - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=verysecret'
-      - 'MYSQL_USER=myuser'
+      - 'MYSQL_DATABASE=poc_docker'
+      - 'MYSQL_ROOT_PASSWORD=1234'
     ports:
       - '3306'
   java_app:
+    image: 'openjdk:latest'
     ports:
       - '8080'
